@@ -3,6 +3,8 @@ import {FcLike,FcLikePlaceholder} from "react-icons/fc"
 import { toast } from 'react-toastify';
 import { FcRating } from "react-icons/fc";
 import image from "./image .jpg"
+import {Link} from "react-router-dom"
+
 
 
 
@@ -33,8 +35,9 @@ const Card = (props) => {
             toast.success("Liked Successfully");
         }
     }
+   // console.log(shows.id)
   return (
-    <div className='w-[200px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden m-2 p-2'>
+    <Link to= {`/movie?id=${shows.id}`} className='w-[200px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden m-2 p-2'>
         <div >
             <img src={shows?.image != null?shows?.image?.medium:image} alt='images'/>
 
@@ -67,7 +70,7 @@ const Card = (props) => {
        
 
         
-    </div>
+    </Link>
   )
 }
 

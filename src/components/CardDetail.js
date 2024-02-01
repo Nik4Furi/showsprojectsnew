@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 
 const CardDetail = () => {
- 
-
-  
-
   return (
     <div>
       <h3>{shows.name}</h3>
